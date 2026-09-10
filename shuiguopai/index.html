@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>水果派-时令水果甜品烘焙指南与家庭做法</title>
+<meta name="description" content="水果派是常见的家庭甜品，本文介绍水果派的基本做法、常见水果选择、派皮处理、烘焙技巧、保存方法与常见问题，帮助你做出酥脆不湿软的水果派。">
+<meta name="keywords" content="水果派,水果派做法,水果派配方,苹果派,水果派皮,烘焙甜品,家庭烘焙">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --peach:#f7a072;
+  --peach-deep:#e07a4f;
+  --berry:#c0435a;
+  --berry-deep:#9c2f44;
+  --cream:#fff8f0;
+  --crust:#e8c39e;
+  --crust-deep:#c99b6b;
+  --ink:#3d2c25;
+  --ink-soft:#6d5a50;
+  --line:#f0dcc8;
+  --white:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--cream);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1180px,92%);margin:0 auto}
+
+/* ---------- Header ---------- */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 2px 14px rgba(200,150,110,.08);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:14px 0;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:22px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:var(--berry-deep);
+}
+.logo .mark{
+  width:38px;height:38px;
+  border-radius:50% 50% 46% 46%;
+  background:radial-gradient(circle at 32% 30%,#ffd9a8,var(--peach) 55%,var(--peach-deep));
+  display:grid;place-items:center;
+  color:#fff;font-size:18px;
+  box-shadow:inset 0 -3px 6px rgba(160,80,40,.25);
+}
+.logo small{
+  display:block;
+  font-size:11px;
+  font-weight:500;
+  color:var(--ink-soft);
+  letter-spacing:2px;
+}
+.main-nav ul{
+  display:flex;
+  gap:6px;
+  list-style:none;
+  flex-wrap:wrap;
+}
+.main-nav a{
+  display:block;
+  padding:8px 15px;
+  border-radius:999px;
+  font-size:15px;
+  color:var(--ink-soft);
+  transition:.22s;
+}
+.main-nav a:hover,.main-nav a.active{
+  background:#fdece0;
+  color:var(--berry-deep);
+  font-weight:600;
+}
+.header-cta{
+  padding:9px 20px;
+  border-radius:999px;
+  background:linear-gradient(135deg,var(--peach),var(--berry));
+  color:#fff;
+  font-size:14px;
+  font-weight:600;
+  white-space:nowrap;
+  box-shadow:0 6px 16px rgba(224,122,79,.28);
+}
+.header-cta:hover{filter:brightness(1.05)}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:
+    radial-gradient(circle at 88% 18%,rgba(247,160,114,.28),transparent 46%),
+    radial-gradient(circle at 6% 92%,rgba(192,67,90,.16),transparent 42%),
+    linear-gradient(180deg,#fff7ef,#fdeee1);
+  padding:60px 0 54px;
+  border-bottom:1px solid var(--line);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:48px;
+  align-items:center;
+}
+.hero-tag{
+  display:inline-block;
+  font-size:13px;
+  letter-spacing:3px;
+  color:var(--peach-deep);
+  background:#fff;
+  border:1px dashed var(--crust);
+  padding:5px 14px;
+  border-radius:999px;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:clamp(30px,4.4vw,46px);
+  line-height:1.28;
+  letter-spacing:1px;
+  color:var(--berry-deep);
+  margin-bottom:18px;
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--peach-deep);
+  border-bottom:5px solid rgba(247,160,114,.45);
+}
+.hero p.lead{
+  font-size:17px;
+  color:var(--ink-soft);
+  max-width:560px;
+  margin-bottom:26px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:28px}
+.btn{
+  display:inline-block;
+  padding:12px 28px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:600;
+  transition:.22s;
+  cursor:pointer;
+  border:none;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--peach-deep),var(--berry));
+  color:#fff;
+  box-shadow:0 8px 20px rgba(192,67,90,.24);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(192,67,90,.3)}
+.btn-ghost{
+  background:#fff;
+  color:var(--berry-deep);
+  border:1.5px solid var(--crust);
+}
+.btn-ghost:hover{background:#fff3e8}
+.hero-facts{
+  display:flex;
+  gap:34px;
+  flex-wrap:wrap;
+  padding-top:22px;
+  border-top:1px dashed var(--crust);
+}
+.hero-facts div strong{
+  display:block;
+  font-size:20px;
+  color:var(--berry-deep);
+}
+.hero-facts div span{font-size:13px;color:var(--ink-soft)}
+
+.hero-visual{
+  position:relative;
+  display:grid;
+  place-items:center;
+}
+.pie-plate{
+  width:min(340px,80vw);
+  aspect-ratio:1;
+  border-radius:50%;
+  background:
+    conic-gradient(from 20deg,#f6c58f,#eab072,#f6c58f,#e2a05f,#f6c58f);
+  display:grid;
+  place-items:center;
+  box-shadow:0 26px 50px rgba(160,95,50,.28),inset 0 0 0 14px #fffaf4,inset 0 0 0 16px var(--crust);
+  position:relative;
+}
+.pie-plate::after{
+  content:"";
+  position:absolute;
+  inset:14%;
+  border-radius:50%;
+  background:
+    radial-gradient(circle at 50% 50%,#ffe9c9 0 18%,transparent 19%),
+    repeating-conic-gradient(from 0deg,#f0b877 0 12deg,transparent 12deg 24deg),
+    radial-gradient(circle at 50% 50%,#f8c78e,#e8a86a);
+  box-shadow:inset 0 0 22px rgba(170,105,50,.35);
+}
+.pie-plate::before{
+  content:"";
+  position:absolute;
+  inset:26%;
+  border-radius:50%;
+  background:radial-gradient(circle at 40% 35%,#e05c72,#b8364c 70%);
+  box-shadow:inset 0 -6px 14px rgba(120,20,40,.4);
+  z-index:2;
+}
+.hero-note{
+  position:absolute;
+  bottom:-6px;
+  right:0;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:12px 16px;
+  font-size:13px;
+  color:var(--ink-soft);
+  box-shadow:0 12px 26px rgba(180,130,90,.16);
+  max-width:210px;
+}
+.hero-note strong{color:var(--berry-deep);display:block;font-size:14px;margin-bottom:2px}
+
+/* ---------- Section base ---------- */
+section{padding:62px 0}
+.sec-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:20px;
+  margin-bottom:34px;
+  flex-wrap:wrap;
+}
+.sec-head h2{
+  font-size:clamp(22px,3vw,30px);
+  color:var(--berry-deep);
+  letter-spacing:1px;
+  position:relative;
+  padding-left:16px;
+}
+.sec-head h2::before{
+  content:"";
+  position:absolute;
+  left:0;top:6px;bottom:6px;
+  width:6px;
+  border-radius:6px;
+  background:linear-gradient(180deg,var(--peach),var(--berry));
+}
+.sec-head p{color:var(--ink-soft);font-size:15px;max-width:560px}
+
+/* ---------- 做法步骤 ---------- */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+.step{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:26px 22px;
+  position:relative;
+  transition:.25s;
+}
+.step:hover{transform:translateY(-5px);box-shadow:0 18px 34px rgba(200,150,110,.16);border-color:var(--crust)}
+.step .num{
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--peach),var(--peach-deep));
+  width:42px;height:42px;
+  border-radius:14px;
+  display:grid;place-items:center;
+  margin-bottom:16px;
+}
+.step h3{font-size:17px;margin-bottom:8px;color:var(--ink)}
+.step p{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- 水果选择 ---------- */
+.fruit-section{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.fruit-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.fruit-card{
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:22px;
+  background:var(--cream);
+  transition:.24s;
+}
+.fruit-card:hover{background:#fff6ec;border-color:var(--crust)}
+.fruit-card .dot{
+  width:14px;height:14px;border-radius:50%;
+  display:inline-block;margin-right:8px;
+  vertical-align:middle;
+}
+.fruit-card h3{font-size:16px;display:flex;align-items:center;margin-bottom:10px}
+.fruit-card p{font-size:14px;color:var(--ink-soft);margin-bottom:10px}
+.fruit-card .meta{
+  font-size:12.5px;
+  color:var(--peach-deep);
+  background:#fff;
+  border:1px dashed var(--crust);
+  border-radius:8px;
+  padding:7px 10px;
+  display:block;
+}
+
+/* ---------- 技巧 ---------- */
+.tips-layout{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:40px;
+  align-items:start;
+}
+.tips-list{list-style:none;display:grid;gap:16px}
+.tips-list li{
+  background:#fff;
+  border-left:4px solid var(--peach);
+  border-radius:0 14px 14px 0;
+  padding:16px 20px;
+  box-shadow:0 6px 18px rgba(210,165,125,.12);
+}
+.tips-list li strong{display:block;font-size:15.5px;color:var(--berry-deep);margin-bottom:4px}
+.tips-list li span{font-size:14px;color:var(--ink-soft)}
+.tips-aside{
+  background:linear-gradient(160deg,#fff4e8,#fde6d5);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:28px;
+}
+.tips-aside h3{font-size:18px;color:var(--berry-deep);margin-bottom:14px}
+.tips-aside dl{display:grid;gap:14px}
+.tips-aside dt{font-weight:700;font-size:14.5px;color:var(--ink)}
+.tips-aside dd{font-size:13.5px;color:var(--ink-soft)}
+
+/* ---------- 场景 ---------- */
+.scene-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.scene{
+  background:#fff;
+  border-radius:18px;
+  border:1px solid var(--line);
+  overflow:hidden;
+  transition:.25s;
+}
+.scene:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(200,150,110,.16)}
+.scene .top{
+  height:96px;
+  display:grid;
+  place-items:center;
+  font-size:30px;
+  color:#fff;
+}
+.scene:nth-child(1) .top{background:linear-gradient(135deg,#f7a072,#e07a4f)}
+.scene:nth-child(2) .top{background:linear-gradient(135deg,#e0788c,#b8364c)}
+.scene:nth-child(3) .top{background:linear-gradient(135deg,#e8c39e,#c99b6b)}
+.scene .body{padding:20px 22px 24px}
+.scene h3{font-size:16.5px;margin-bottom:8px}
+.scene p{font-size:14px;color:var(--ink-soft)}
+
+/* ---------- FAQ ---------- */
+.faq{background:#fff;border-top:1px solid var(--line)}
+.faq-list{display:grid;gap:14px;max-width:900px;margin:0 auto}
+.faq-item{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:18px 22px;
+  background:var(--cream);
+}
+.faq-item h3{
+  font-size:16px;
+  color:var(--berry-deep);
+  margin-bottom:8px;
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+}
+.faq-item h3::before{
+  content:"Q";
+  flex:0 0 24px;
+  height:24px;
+  border-radius:8px;
+  background:var(--peach);
+  color:#fff;
+  font-size:13px;
+  display:grid;
+  place-items:center;
+  margin-top:2px;
+}
+.faq-item p{font-size:14.5px;color:var(--ink-soft);padding-left:34px}
+
+/* ---------- Footer ---------- */
+.site-footer{
+  background:#3d2c25;
+  color:#e8d8cb;
+  padding:52px 0 26px;
+  margin-top:0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr 1fr;
+  gap:34px;
+  padding-bottom:34px;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+.footer-grid h4{
+  font-size:15px;
+  color:#fff;
+  margin-bottom:14px;
+  letter-spacing:1px;
+}
+.footer-grid p,.footer-grid li{
+  font-size:13.5px;
+  color:#c9b6a8;
+  line-height:2;
+}
+.footer-grid ul{list-style:none}
+.footer-grid a:hover{color:var(--peach)}
+.footer-logo{
+  display:flex;align-items:center;gap:10px;
+  font-size:20px;font-weight:800;color:#fff;margin-bottom:12px;
+}
+.footer-logo .mark{
+  width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 32% 30%,#ffd9a8,var(--peach) 55%,var(--peach-deep));
+  display:grid;place-items:center;color:#fff;font-size:16px;
+}
+.copyright{
+  text-align:center;
+  font-size:13px;
+  color:#9c8878;
+  padding-top:22px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .hero-grid{grid-template-columns:1fr;gap:36px}
+  .hero-visual{order:-1}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .fruit-grid{grid-template-columns:repeat(2,1fr)}
+  .tips-layout{grid-template-columns:1fr}
+  .scene-grid{grid-template-columns:1fr 1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .header-inner{flex-wrap:wrap;gap:12px}
+  .main-nav{order:3;width:100%}
+  .main-nav ul{gap:2px}
+  .main-nav a{padding:7px 11px;font-size:14px}
+  .header-cta{display:none}
+  section{padding:46px 0}
+  .hero{padding:42px 0}
+  .steps{grid-template-columns:1fr}
+  .fruit-grid{grid-template-columns:1fr}
+  .scene-grid{grid-template-columns:1fr}
+  .hero-facts{gap:22px}
+  .footer-grid{grid-template-columns:1fr;gap:24px}
+  .faq-item p{padding-left:0}
+  .faq-item h3::before{margin-top:1px}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top">
+      <span class="mark">派</span>
+      <span>水果派
+        <small>FRUIT PIE GUIDE</small>
+      </span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <ul>
+        <li><a class="active" href="#steps">基本做法</a></li>
+        <li><a href="#fruits">水果选择</a></li>
+        <li><a href="#tips">烘焙技巧</a></li>
+        <li><a href="#scene">食用场景</a></li>
+        <li><a href="#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <a class="header-cta" href="#steps">从零开始做</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" aria-label="水果派简介">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="hero-tag">家庭烘焙 · 甜品入门</span>
+        <h1>水果派：把<em>时令水果</em>装进酥脆派皮里的家常甜品</h1>
+        <p class="lead">
+          水果派以派皮包裹或铺放水果馅料烘烤而成，做法灵活、口味随季节变化。
+          它既是烤箱甜品的入门选择，也适合作为下午茶、节日餐桌和朋友聚会的分享点心。
+          下面从派皮、馅料到烘烤，把关键环节一次讲清楚。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#steps">查看基本做法</a>
+          <a class="btn btn-ghost" href="#fruits">挑一款水果</a>
+        </div>
+        <div class="hero-facts">
+          <div><strong>4 步</strong><span>揉皮 · 制馅 · 整形 · 烘烤</span></div>
+          <div><strong>约 60 分钟</strong><span>不含冷藏松弛时间</span></div>
+          <div><strong>6～8 寸</strong><span>常见家用派盘规格</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="pie-plate" role="img" aria-label="水果派示意图：金黄派皮与红色水果馅料"></div>
+        <div class="hero-note">
+          <strong>关键提醒</strong>
+          水果馅先处理掉多余水分，派底才不容易湿软。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 基本做法 -->
+  <section id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>水果派的基本做法</h2>
+        <p>无论使用哪种水果，水果派的制作都可以拆成四个环节。掌握顺序，比记住某一份配方更重要。</p>
+      </div>
+      <div class="steps">
+        <article class="step">
+          <div class="num">01</div>
+          <h3>制作派皮</h3>
+          <p>低筋面粉与冷黄油搓成粗砂状，加少量冰水与糖盐揉成团，冷藏松弛后再擀开，派皮才会酥而不硬。</p>
+        </article>
+        <article class="step">
+          <div class="num">02</div>
+          <h3>处理水果馅</h3>
+          <p>水果切块后按含水量决定是否加糖腌渍、沥汁或短时加热，必要时用淀粉收稠，避免烤后出水。</p>
+        </article>
+        <article class="step">
+          <div class="num">03</div>
+          <h3>整形与铺馅</h3>
+          <p>派皮铺入派盘压实、扎孔，可先铺一层饼干碎或杏仁粉隔离水分，再放入水果馅并覆盖上层派皮。</p>
+        </article>
+        <article class="step">
+          <div class="num">04</div>
+          <h3>烘烤与冷却</h3>
+          <p>中高温先定型上色，再转中温烤透。出炉后需静置冷却，让馅料凝固，切块才整齐不流汁。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 水果选择 -->
+  <section id="fruits" class="fruit-section">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>哪些水果适合做派</h2>
+        <p>水果的含水量、酸度和果胶含量决定了成品效果。以下三类是家庭烘焙中较常见的选择。</p>
+      </div>
+      <div class="fruit-grid">
+        <article class="fruit-card">
+          <h3><span class="dot" style="background:#c0435a"></span>浆果类</h3>
+          <p>草莓、蓝莓、树莓、黑莓等果胶较丰富，加热后容易收稠，颜色也好看，适合做单层开放式水果派。</p>
+          <span class="meta">注意：草莓含水量偏高，建议先加糖静置沥汁</span>
+        </article>
+        <article class="fruit-card">
+          <h3><span class="dot" style="background:#e8a13c"></span>仁果类</h3>
+          <p>苹果、梨质地紧实，切片后经烘烤仍能保持形状，是传统双层派皮水果派最稳妥的原料。</p>
+          <span class="meta">建议：切片厚薄均匀，提前用糖与香料拌匀</span>
+        </article>
+        <article class="fruit-card">
+          <h3><span class="dot" style="background:#7fa650"></span>核果类</h3>
+          <p>桃子、杏、樱桃、李子风味浓郁，适合搭配杏仁粉或奶油馅，做成层次更丰富的夏季水果派。</p>
+          <span class="meta">建议：去皮去核后控干汁水，避免底部湿软</span>
+        </article>
+        <article class="fruit-card">
+          <h3><span class="dot" style="background:#d98b2b"></span>热带水果</h3>
+          <p>菠萝、芒果、香蕉等香气突出，但受热后质地变化明显，更适合做免烤水果派或短时烘烤的款式。</p>
+          <span class="meta">建议：搭配卡仕达或奶油馅，减少直接高温烘烤</span>
+        </article>
+        <article class="fruit-card">
+          <h3><span class="dot" style="background:#8f6bb0"></span>干果与果干</h3>
+          <p>葡萄干、无花果干、枣等可提前用果汁或酒浸泡回软，与坚果搭配能做出风味偏浓郁的秋冬水果派。</p>
+          <span class="meta">建议：控制总量，果干甜度高，糖可适当减少</span>
+        </article>
+        <article class="fruit-card">
+          <h3><span class="dot" style="background:#5a9bb5"></span>混合搭配</h3>
+          <p>把高水分水果与低水分水果按比例混合，既能保留多汁口感，也能降低馅料出水导致派底变软的风险。</p>
+          <span class="meta">建议：主料搭配一种增稠辅料，效果更稳定</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技巧 -->
+  <section id="tips">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>让水果派更好吃的技巧</h2>
+        <p>水果派失败多半不是配方问题，而是温度、水分和时间的细节没有处理好。</p>
+      </div>
+      <div class="tips-layout">
+        <ul class="tips-list">
+          <li>
+            <strong>派皮全程保持低温</strong>
+            <span>黄油切小块后先冷藏，揉面时尽量少用手温，擀开前再冷藏一次。低温能让派皮烤出明显层次。</span>
+          </li>
+          <li>
+            <strong>水果馅先控水</strong>
+            <span>切好的水果加糖静置十几分钟，倒掉析出的果汁，或将果汁加热浓缩后再拌回，可显著减少底部湿软。</span>
+          </li>
+          <li>
+            <strong>给派底加一层隔离</strong>
+            <span>在生派皮上刷蛋液、撒饼干碎或杏仁粉，形成薄薄的阻水层，是开放式水果派的常用做法。</span>
+          </li>
+          <li>
+            <strong>上层派皮要留透气口</strong>
+            <span>盖好上层派皮后，在中间或表面划出几道口子，让蒸汽排出，避免馅料顶起派皮或溢出。</span>
+          </li>
+          <li>
+            <strong>上色过深及时加盖</strong>
+            <span>如果边缘已经金黄但中心还没烤透，可用锡纸包住派边继续烘烤，防止局部烤焦。</span>
+          </li>
+          <li>
+            <strong>冷却到位再切</strong>
+            <span>刚出炉的馅料仍是流动状态，静置至温热甚至完全放凉再切，切面会更干净，风味也更稳定。</span>
+          </li>
+        </ul>
+        <aside class="tips-aside">
+          <h3>派皮与馅料配比参考</h3>
+          <dl>
+            <dt>派皮</dt>
+            <dd>以 6 寸派盘为例，面粉、冷黄油、冰水的比例大致为 2 : 1 : 0.5，可按面粉吸水性微调。</dd>
+            <dt>甜度</dt>
+            <dd>水果本身甜度差异大，建议先按水果重量的 10% 左右加糖，尝过馅料后再决定是否增加。</dd>
+            <dt>增稠</dt>
+            <dd>玉米淀粉、木薯淀粉或果胶都可使用，用量随水果含水量调整，宁少勿多，避免馅料发糊。</dd>
+            <dt>烘烤温度</dt>
+            <dd>常见做法是先以较高温度定型上色，再降低温度烤透内部，具体时间需结合自家烤箱实际情况调整。</dd>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 场景 -->
+  <section id="scene">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>水果派的常见食用场景</h2>
+        <p>同一份水果派，换个做法和搭配，就能适应不同的场合与口味需求。</p>
+      </div>
+      <div class="scene-grid">
+        <article class="scene">
+          <div class="top">☕</div>
+          <div class="body">
+            <h3>下午茶与家庭日常</h3>
+            <p>切成小块的开放式水果派，搭配红茶、咖啡或酸奶，是操作门槛较低的日常甜品选择。</p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="top">🎉</div>
+          <div class="body">
+            <h3>节日与聚会分享</h3>
+            <p>使用当季水果做成整只派，表面用派皮编出格纹或造型，端上桌更有仪式感，也方便分食。</p>
+          </div>
+        </article>
+        <article class="scene">
+          <div class="top">🧺</div>
+          <div class="body">
+            <h3>户外与便当携带</h3>
+            <p>选择含水量较低的水果馅，烤透并充分冷却后切块，更便于装盒携带，不易在途中变形渗汁。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>水果派常见问题</h2>
+        <p>以下问题来自家庭烘焙中较常遇到的情况，可作为操作时的参考。</p>
+      </div>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>水果派底部总是湿软，是什么原因？</h3>
+          <p>通常与水果出水、派皮未预烤、馅料过厚有关。可以先把水果加糖静置并沥去汁水，或在派底刷蛋液、撒一层饼干碎或杏仁粉，必要时先单独烘烤派皮再填入馅料。</p>
+        </article>
+        <article class="faq-item">
+          <h3>没有低筋面粉，可以用普通面粉做派皮吗？</h3>
+          <p>可以，但筋度越高，派皮越容易发硬、收缩。若只有中筋面粉，可适当增加黄油比例、减少揉面时间，并保证充分冷藏松弛，成品口感会更接近酥松效果。</p>
+        </article>
+        <article class="faq-item">
+          <h3>水果派可以提前做好吗？如何保存？</h3>
+          <p>烤好的水果派冷却后可冷藏保存，建议一两天内食用完毕，食用前回温或短时复烤风味更好。含奶油、卡仕达等易腐馅料的款式必须冷藏，未烤的生派皮也可冷冻保存，使用时再取出。</p>
+        </article>
+        <article class="faq-item">
+          <h3>水果派和水果挞有什么区别？</h3>
+          <p>两者外形接近，主要差别在模具与派皮。挞通常使用较浅的挞模，挞皮偏酥脆、偏甜；派盘更深，派皮层次更明显，馅料用量也更多。家庭制作时不必严格区分，按手边模具调整即可。</p>
+        </article>
+        <article class="faq-item">
+          <h3>减糖会不会影响水果派的成型？</h3>
+          <p>糖除了提供甜味，也参与水果出水、收稠和上色。减糖时可适当增加增稠辅料，并缩短水果腌渍时间，成品颜色可能偏浅，属于正常现象。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="mark">派</span>
+          水果派
+        </div>
+        <p>一个围绕水果派做法、水果选择与家庭烘焙技巧整理的内容页面，帮助初次接触烤箱甜品的人少走弯路。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#steps">基本做法</a></li>
+          <li><a href="#fruits">水果选择</a></li>
+          <li><a href="#tips">烘焙技巧</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>实用参考</h4>
+        <ul>
+          <li><a href="#scene">食用场景</a></li>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#tips">派皮配比</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>烘焙提示</h4>
+        <ul>
+          <li>派皮保持低温操作</li>
+          <li>水果馅先控水再入模</li>
+          <li>出炉冷却后再切块</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">水果派 · 家庭烘焙内容整理 | 页面内容仅供烹饪参考，实际操作请结合食材与设备情况调整</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var links = document.querySelectorAll('.main-nav a');
+  var sections = [];
+  links.forEach(function(a){
+    var id = a.getAttribute('href');
+    if(id && id.charAt(0) === '#'){
+      var el = document.querySelector(id);
+      if(el){ sections.push({link:a, el:el}); }
+    }
+  });
+  if(!sections.length) return;
+
+  function update(){
+    var pos = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(s){
+      if(s.el.offsetTop <= pos){ current = s; }
+    });
+    links.forEach(function(a){ a.classList.remove('active'); });
+    if(current){ current.link.classList.add('active'); }
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if(!ticking){
+      window.requestAnimationFrame(function(){
+        update();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, {passive:true});
+  update();
+})();
+</script>
+
+</body>
+  </html>
